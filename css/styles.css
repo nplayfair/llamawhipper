@@ -20,7 +20,8 @@ h1 {
   "blank blank blank blank blank blank blank"
   ". timer . trackinfo trackinfo  . ."
   ". timer . trackdata mono . ."
-  ". timer . slider winbutton . .";
+  ". timer . slider winbutton . ."
+  ". pbslider pbslider pbslider pbslider . .";
 }
 
 #playlistcontainer {
@@ -106,6 +107,37 @@ h1 {
   align-self: baseline;
 }
 
+.playbackcontainer {
+  margin-top: 3px;
+  grid-area: pbslider;
+}
+
+.playbackslider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  outline: none; /* Remove outline */
+  height: 7px;
+  width: 98%;
+  border: 1px solid #555;
+  background: rgb(45,49,56);
+  background: -moz-linear-gradient(left, rgba(45,49,56,1) 0%, rgba(82,92,109,1) 100%);
+  background: -webkit-linear-gradient(left, rgba(45,49,56,1) 0%,rgba(82,92,109,1) 100%);
+  background: linear-gradient(to right, rgba(45,49,56,1) 0%,rgba(82,92,109,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2d3138', endColorstr='#525c6d',GradientType=1 );
+}
+
+.playbackslider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 32px;
+  height: 13px;
+  box-sizing: border-box;
+  border: 2px solid #8c743e;
+  background-color: #f4e9c9;
+  cursor: pointer;
+}
+
+
 .slider {
   -webkit-appearance: none;  /* Override default CSS styles */
   appearance: none;
@@ -119,8 +151,6 @@ h1 {
   width: 16px;
   height: 13px;
   box-sizing: border-box;
-  width: 16px;
-  height: 13px;
   border: 2px solid #999;
   background-image: linear-gradient(90deg, #000000 16.67%, #999 16.67%, #999 50%, #000000 50%, #000000 66.67%, #999 66.67%, #999 100%);
 background-size: 10.00px 12.00px;
