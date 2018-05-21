@@ -1,0 +1,48 @@
+body {
+  font-family: sans-serif;
+
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+#appcontainer {
+  width: 300px;
+  margin: 50px auto;
+  background-color: #222;
+  display: grid;
+  grid-template-columns: 5px 85px 5px 200px 5px;
+  grid-template-rows: 18px 18px 18px 18px 25px 20px;
+
+  grid-template-areas:
+  "title title title title title title"
+  "blank blank blank blank blank blank"
+  "gutter timer . trackinfo . ."
+  "gutter timer .   .   .   .";
+}
+
+.titlebar {
+  color: white;
+  text-align: center;
+  font-size: 10px;
+  line-height: 10px;
+  grid-area: title;
+}
+
+.timer {
+  color: lime;
+  text-align: right;
+  font-size: 24px;
+  grid-area: timer;
+  border: 1px solid gray;
+}
+
+.trackinfo {
+  color: lime;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 10px;
+  grid-area: trackinfo;
+  border: 1px solid gray;
+}
