@@ -1,11 +1,12 @@
 {
-  "name": "winamp",
+  "name": "llamawhipper",
   "version": "1.0.0",
   "description": "Winamp style playlists",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": "https://github.com/nplayfair/llamawhipper.git",
   "author": "nplayfair",
   "license": "ISC",
   "dependencies": {}

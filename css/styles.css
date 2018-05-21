@@ -13,13 +13,14 @@ h1 {
   background-color: #222;
   display: grid;
   grid-template-columns: 5px 85px 5px 200px 5px;
-  grid-template-rows: 18px 18px 18px 18px 25px 20px;
+  grid-template-rows: 18px 18px 18px 18px 20px 20px;
 
   grid-template-areas:
   "title title title title title title"
   "blank blank blank blank blank blank"
   "gutter timer . trackinfo . ."
-  "gutter timer .   .   .   .";
+  "gutter timer . trackdata trackdata ."
+  "gutter timer . . . .";
 }
 
 .titlebar {
@@ -45,4 +46,32 @@ h1 {
   font-size: 10px;
   grid-area: trackinfo;
   border: 1px solid gray;
+}
+
+.trackdata {
+  color: white;
+  text-align: left;
+  font-size: 10px;
+  padding-top: 3px;
+  grid-area: trackdata;
+}
+
+.trackValue {
+  color: lime;
+  background-color: black;
+  border: 1px solid gray;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.glow {
+  text-decoration: none;
+  font-style: normal;
+  color: lime;
+  text-shadow: 0 0 3px white;
+}
+
+.monostereo {
+  float: right;
+  margin-right: 5px;
 }
