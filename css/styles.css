@@ -1,6 +1,5 @@
 body {
   font-family: sans-serif;
-
 }
 
 h1 {
@@ -11,6 +10,7 @@ h1 {
   width: 300px;
   margin: 50px auto;
   background-color: #222;
+  color: white;
   display: grid;
   grid-template-columns: 5px 85px 5px 200px 5px;
   grid-template-rows: 18px 18px 18px 18px 20px 20px;
@@ -20,11 +20,17 @@ h1 {
   "blank blank blank blank blank blank"
   "gutter timer . trackinfo . ."
   "gutter timer . trackdata trackdata ."
-  "gutter timer . . . .";
+  "gutter timer . slider slider .";
+}
+
+#playlistcontainer {
+  width: 300px;
+  margin: 50px auto;
+  background-color: #222;
+  display: grid;
 }
 
 .titlebar {
-  color: white;
   text-align: center;
   font-size: 10px;
   line-height: 10px;
@@ -72,6 +78,49 @@ h1 {
 }
 
 .monostereo {
-  float: right;
-  margin-right: 5px;
+  justify-self: end;
+}
+
+/*  Sliders  */
+.slidercontainer {
+  margin-top: 3px;
+  grid-area: slider;
+  align-self: end;
+}
+
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  outline: none; /* Remove outline */
+  height: 10px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 13px;
+  background: #999;
+  cursor: pointer;
+}
+
+.vol {
+  width: 70px;
+  background-color: #ff9300; /* orange */
+}
+
+.bal {
+  background-color: green;
+  width: 40px;
+}
+
+/*  Buttons  */
+#windowbtngroup {
+  display: inline-block;
+  justify-self: end;
+}
+.winampbtn {
+  background-color: #eee;
+  font-size: 8px;
+  outline: none;
 }
