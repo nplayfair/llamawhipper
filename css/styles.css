@@ -12,15 +12,15 @@ h1 {
   background-color: #222;
   color: white;
   display: grid;
-  grid-template-columns: 5px 85px 5px 200px 5px;
+  grid-template-columns: 5px 85px 5px 120px 80px 5px;
   grid-template-rows: 18px 18px 18px 18px 20px 20px;
 
   grid-template-areas:
-  "title title title title title title"
-  "blank blank blank blank blank blank"
-  "gutter timer . trackinfo . ."
-  "gutter timer . trackdata trackdata ."
-  "gutter timer . slider slider .";
+  "title title title title title title title"
+  "blank blank blank blank blank blank blank"
+  ". timer . trackinfo trackinfo  . ."
+  ". timer . trackdata mono . ."
+  ". timer . slider winbutton . .";
 }
 
 #playlistcontainer {
@@ -70,6 +70,14 @@ h1 {
   padding-right: 2px;
 }
 
+.monostereo {
+  color: white;
+  font-size: 10px;
+  grid-area: mono;
+  justify-self: end;
+  align-self: center;
+}
+
 .glow {
   text-decoration: none;
   font-style: normal;
@@ -77,15 +85,13 @@ h1 {
   text-shadow: 0 0 3px white;
 }
 
-.monostereo {
-  justify-self: end;
-}
+
 
 /*  Sliders  */
 .slidercontainer {
   margin-top: 3px;
   grid-area: slider;
-  align-self: end;
+  align-self: baseline;
 }
 
 .slider {
@@ -105,7 +111,7 @@ h1 {
 }
 
 .vol {
-  width: 70px;
+  width: 65px;
   background-color: #ff9300; /* orange */
 }
 
@@ -116,7 +122,8 @@ h1 {
 
 /*  Buttons  */
 #windowbtngroup {
-  display: inline-block;
+  grid-area: winbutton;
+  align-self: center;
   justify-self: end;
 }
 .winampbtn {
